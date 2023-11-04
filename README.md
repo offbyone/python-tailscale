@@ -10,11 +10,11 @@
 [![Code Coverage][codecov-shield]][codecov]
 [![Code Quality][code-quality-shield]][code-quality]
 
-[![Sponsor Frenck via GitHub Sponsors][github-sponsors-shield]][github-sponsors]
-
-[![Support Frenck on Patreon][patreon-shield]][patreon]
+[![Sponsor Offbyone via GitHub Sponsors][github-sponsors-shield]][github-sponsors]
 
 Asynchronous client for the Tailscale API.
+
+Note: _This is a fork of [python-tailscale by @frenck](https://github.com/frenck/python-tailscale)_
 
 ## About
 
@@ -25,7 +25,7 @@ integrate with Tailscale.
 ## Installation
 
 ```bash
-pip install tailscale
+pip install tailscale-nuevo
 ```
 
 ## Usage
@@ -39,7 +39,7 @@ from tailscale import Tailscale
 async def main():
     """Show example on using the Tailscale API client."""
     async with Tailscale(
-        tailnet="frenck",
+        tailnet="offbyone",
         api_key="tskey-somethingsomething",
     ) as tailscale:
 
@@ -110,7 +110,7 @@ poetry run pytest
 
 ## Authors & contributors
 
-The original setup of this repository is by [Franck Nijhof][frenck].
+The original setup of this repository is by [Franck Nijhof][offbyone].
 
 For a full list of all authors and contributors,
 check [the contributor's page][contributors].
@@ -139,27 +139,27 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-[build-shield]: https://github.com/frenck/python-tailscale/actions/workflows/tests.yaml/badge.svg
-[build]: https://github.com/frenck/python-tailscale/actions/workflows/tests.yaml
-[code-quality-shield]: https://img.shields.io/lgtm/grade/python/g/frenck/python-tailscale.svg?logo=lgtm&logoWidth=18
-[code-quality]: https://lgtm.com/projects/g/frenck/python-tailscale/context:python
-[codecov-shield]: https://codecov.io/gh/frenck/python-tailscale/branch/master/graph/badge.svg
-[codecov]: https://codecov.io/gh/frenck/python-tailscale
-[contributors]: https://github.com/frenck/python-tailscale/graphs/contributors
-[frenck]: https://github.com/frenck
-[github-sponsors-shield]: https://frenck.dev/wp-content/uploads/2019/12/github_sponsor.png
-[github-sponsors]: https://github.com/sponsors/frenck
+[build-shield]: https://github.com/offbyone/python-tailscale/actions/workflows/tests.yaml/badge.svg
+[build]: https://github.com/offbyone/python-tailscale/actions/workflows/tests.yaml
+[code-quality-shield]: https://img.shields.io/lgtm/grade/python/g/offbyone/python-tailscale.svg?logo=lgtm&logoWidth=18
+[code-quality]: https://lgtm.com/projects/g/offbyone/python-tailscale/context:python
+[codecov-shield]: https://codecov.io/gh/offbyone/python-tailscale/branch/master/graph/badge.svg
+[codecov]: https://codecov.io/gh/offbyone/python-tailscale
+[contributors]: https://github.com/offbyone/python-tailscale/graphs/contributors
+[offbyone]: https://github.com/offbyone
+[github-sponsors-shield]: https://offbyone.dev/wp-content/uploads/2019/12/github_sponsor.png
+[github-sponsors]: https://github.com/sponsors/offbyone
 [keepchangelog]: https://keepachangelog.com/en/1.0.0/
-[license-shield]: https://img.shields.io/github/license/frenck/python-tailscale.svg
+[license-shield]: https://img.shields.io/github/license/offbyone/python-tailscale.svg
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2021.svg
-[patreon-shield]: https://frenck.dev/wp-content/uploads/2019/12/patreon.png
-[patreon]: https://www.patreon.com/frenck
+[patreon-shield]: https://offbyone.dev/wp-content/uploads/2019/12/patreon.png
+[patreon]: https://www.patreon.com/offbyone
 [poetry-install]: https://python-poetry.org/docs/#installation
 [poetry]: https://python-poetry.org
 [pre-commit]: https://pre-commit.com/
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-production%20ready-brightgreen.svg
 [pypi]: https://pypi.org/project/tailscale/
 [python-versions-shield]: https://img.shields.io/pypi/pyversions/tailscale
-[releases-shield]: https://img.shields.io/github/release/frenck/python-tailscale.svg
-[releases]: https://github.com/frenck/python-tailscale/releases
+[releases-shield]: https://img.shields.io/github/release/offbyone/python-tailscale.svg
+[releases]: https://github.com/offbyone/python-tailscale/releases
 [semver]: https://semver.org/spec/v2.0.0.html

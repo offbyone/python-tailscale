@@ -7,7 +7,7 @@
     "pyright": "pyright",
     "prettier": "prettier --write **/*.{json,js,md,yml,yaml}"
   },
-  "author": "Franck Nijhof <opensource@frenck.dev>",
+  "author": "Chris Rose <offline@offby1.net>",
   "license": "MIT",
   "devDependencies": {
     "prettier": "^2.2.1",

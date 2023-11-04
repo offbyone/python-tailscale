@@ -67,6 +67,10 @@ bandit = "^1.7.5"
 "Bug Tracker" = "https://github.com/offbyone/python-tailscale/issues"
 Changelog = "https://github.com/offbyone/python-tailscale/releases"
 
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
 [tool.black]
 target-version = ['py39']
 
