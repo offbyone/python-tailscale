@@ -1,14 +1,17 @@
 [tool.poetry]
-name = "tailscale"
-version = "0.0.0"
+name = "tailscale-nuevo"
+version = "1.0.0"
 description = "Asynchronous client for the Tailscale API."
-authors = ["Franck Nijhof <opensource@frenck.dev>"]
-maintainers = ["Franck Nijhof <opensource@frenck.dev>"]
+authors = [
+    "Franck Nijhof <opensource@frenck.dev>",
+    "Chris Rose <offline@offby1.net>",
+]
+maintainers = ["Chris Rose <offline@offby1.net>"]
 license = "MIT"
 readme = "README.md"
-homepage = "https://github.com/frenck/python-tailscale"
-repository = "https://github.com/frenck/python-tailscale"
-documentation = "https://github.com/frenck/python-tailscale"
+homepage = "https://github.com/offbyone/python-tailscale"
+repository = "https://github.com/offbyone/python-tailscale"
+documentation = "https://github.com/offbyone/python-tailscale"
 keywords = ["tailscale", "vpn", "wireguard", "api", "async", "client"]
 classifiers = [
   "Development Status :: 5 - Production/Stable",
@@ -61,8 +64,8 @@ codespell = "^2.2.6"
 bandit = "^1.7.5"
 
 [tool.poetry.urls]
-"Bug Tracker" = "https://github.com/frenck/python-tailscale/issues"
-Changelog = "https://github.com/frenck/python-tailscale/releases"
+"Bug Tracker" = "https://github.com/offbyone/python-tailscale/issues"
+Changelog = "https://github.com/offbyone/python-tailscale/releases"
 
 [tool.black]
 target-version = ['py39']
