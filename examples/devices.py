@@ -9,7 +9,7 @@ from tailscale import Tailscale
 async def main() -> None:
     """Show example on using the Tailscale API client."""
     async with Tailscale(
-        tailnet="frenck",
+        tailnet="tail.net",
         api_key="tskey-somethingsomething",
     ) as tailscale:
 

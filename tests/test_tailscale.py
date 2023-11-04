@@ -28,7 +28,7 @@ async def test_json_request(aresponses: ResponsesMockServer) -> None:
         ),
     )
     async with aiohttp.ClientSession() as session:
-        tailscale = Tailscale(tailnet="frenck", api_key="abc", session=session)
+        tailscale = Tailscale(tailnet="tail.net", api_key="abc", session=session)
         response = await tailscale._request("test")
         assert response["status"] == "ok"
         await tailscale.close()
@@ -47,7 +47,7 @@ async def test_internal_session(aresponses: ResponsesMockServer) -> None:
             text='{"status": "ok"}',
         ),
     )
-    async with Tailscale(tailnet="frenck", api_key="abc") as tailscale:
+    async with Tailscale(tailnet="tail.net", api_key="abc") as tailscale:
         response = await tailscale._request("test")
         assert response["status"] == "ok"
 
@@ -66,7 +66,7 @@ async def test_put_request(aresponses: ResponsesMockServer) -> None:
         ),
     )
     async with aiohttp.ClientSession() as session:
-        tailscale = Tailscale(tailnet="frenck", api_key="abc", session=session)
+        tailscale = Tailscale(tailnet="tail.net", api_key="abc", session=session)
         response = await tailscale._request(
             "test", method=aiohttp.hdrs.METH_POST, data={}
         )
@@ -86,7 +86,7 @@ async def test_timeout(aresponses: ResponsesMockServer) -> None:
 
     async with aiohttp.ClientSession() as session:
         tailscale = Tailscale(
-            tailnet="frenck", api_key="abc", session=session, request_timeout=1
+            tailnet="tail.net", api_key="abc", session=session, request_timeout=1
         )
         with pytest.raises(TailscaleConnectionError):
             assert await tailscale._request("test")
@@ -103,7 +103,7 @@ async def test_http_error400(aresponses: ResponsesMockServer) -> None:
     )
 
     async with aiohttp.ClientSession() as session:
-        tailscale = Tailscale(tailnet="frenck", api_key="abc", session=session)
+        tailscale = Tailscale(tailnet="tail.net", api_key="abc", session=session)
         with pytest.raises(TailscaleError):
             assert await tailscale._request("test")
 
@@ -119,6 +119,6 @@ async def test_http_error401(aresponses: ResponsesMockServer) -> None:
     )
 
     async with aiohttp.ClientSession() as session:
-        tailscale = Tailscale(tailnet="frenck", api_key="abc", session=session)
+        tailscale = Tailscale(tailnet="tail.net", api_key="abc", session=session)
         with pytest.raises(TailscaleAuthenticationError):
             assert await tailscale._request("test")
